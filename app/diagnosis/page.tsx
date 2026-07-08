@@ -89,7 +89,7 @@ export default function DiagnosisPage() {
                   <span className="font-serif text-sm font-semibold uppercase tracking-[0.18em] text-gold">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h2 className="mt-5 font-serif text-2xl font-semibold text-ink">{item.title}</h2>
+                  <h3 className="mt-5 font-serif text-2xl font-semibold text-ink">{item.title}</h3>
                   <p className="mt-4 text-sm leading-7 text-slate-600">{item.description}</p>
                 </article>
               ))}

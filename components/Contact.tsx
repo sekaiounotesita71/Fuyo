@@ -2,6 +2,7 @@
 
 import { FormEvent, useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
 import { company, consultationMethodOptions, contactHighlights, industryOptions, serviceOptions } from "@/data/site";
 
@@ -215,7 +216,12 @@ export function Contact() {
               className="mt-1 accent-green"
               required
             />
-            <span>個人情報の取り扱いに同意します。お問い合わせ内容への返信と初回診断の日程調整に使用します。</span>
+            <span>
+              <Link href="/privacy" className="font-semibold text-green underline-offset-4 hover:underline">
+                プライバシーポリシー
+              </Link>
+              に同意します。
+            </span>
           </label>
 
           <input type="hidden" name="_subject" value="合同会社芙蓉 食品輸出・DX 初回診断お問い合わせ" />

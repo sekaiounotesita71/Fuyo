@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/blank-1",
+      "destination": "/services/export",
+      "permanent": true
+    },
+    {
+      "source": "/blank-2",
+      "destination": "/services/inbound",
+      "permanent": true
+    }
+  ]
+}

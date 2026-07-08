@@ -25,7 +25,7 @@ export default function Home() {
                 FUYOU LLC / Food Business AI & DX
               </p>
               <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.18] md:text-6xl">
-                食品業界の“面倒”を、AIとDXで減らす。
+                食品業界の受発注・見積・海外対応を、AIとDXで整える。
               </h1>
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/78 md:text-xl md:leading-10">
                 LINE注文、見積作成、営業管理、海外対応まで。現場を理解した実践型の業務改善支援。

@@ -22,6 +22,8 @@ export const metadata: Metadata = {
 };
 
 export default function NotePage() {
+  const hasNoteUrl = company.noteUrl !== "#";
+
   return (
     <>
       <Header />
@@ -55,12 +57,16 @@ export default function NotePage() {
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">External</p>
               <h2 className="mt-4 font-serif text-3xl font-semibold text-ink">noteでも発信予定です</h2>
-              <p className="mt-4 leading-8 text-slate-600">note URLは後から差し替えできるように定数化しています。</p>
+              <p className="mt-4 leading-8 text-slate-600">
+                noteでは、公式サイトでは伝えきれない現場目線の考え方や、食品業界の海外展開・DXに関する実務的な話を発信していきます。
+              </p>
             </div>
-            <a href={company.noteUrl} className="inline-flex items-center gap-2 text-sm font-bold text-green">
-              note発信を見る
-              <ArrowRight size={16} aria-hidden />
-            </a>
+            {hasNoteUrl ? (
+              <a href={company.noteUrl} className="inline-flex items-center gap-2 text-sm font-bold text-green">
+                代表の考え方を読む
+                <ArrowRight size={16} aria-hidden />
+              </a>
+            ) : null}
           </div>
         </section>
         <DiagnosisCTA />

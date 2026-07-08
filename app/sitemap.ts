@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/diagnosis", priority: 0.9 },
     { path: "/case", priority: 0.7 },
     { path: "/note", priority: 0.65 },
+    { path: "/privacy", priority: 0.4 },
     ...columnPosts.map((post) => ({ path: `/column/${post.slug}`, priority: 0.7 }))
   ];
 

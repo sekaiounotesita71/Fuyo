@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 import { DiagnosisCTA } from "@/components/DiagnosisCTA";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -66,6 +67,33 @@ export function ServiceDetailPage({ slug }: ServiceDetailPageProps) {
             </div>
           </div>
         </section>
+
+        {"deliverables" in service ? (
+          <section className="section-y bg-white">
+            <div className="container-shell">
+              <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+                <SectionHeading
+                  eyebrow="Deliverables"
+                  title={service.deliverables.title}
+                  description={service.deliverables.description}
+                />
+                <div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {service.deliverables.items.map((item) => (
+                      <div key={item} className="flex items-start gap-3 border border-line bg-smoke/60 p-5">
+                        <CheckCircle2 size={18} className="mt-1 shrink-0 text-green" aria-hidden />
+                        <p className="font-semibold leading-7 text-ink">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/diagnosis" className="btn-primary mt-8">
+                    {service.deliverables.ctaLabel}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         {"philosophy" in service ? (
           <section className="bg-white py-16">

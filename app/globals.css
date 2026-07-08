@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --font-noto-sans-jp: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", system-ui, sans-serif;
+  --font-noto-serif-jp: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
   color-scheme: light;
   background: #ffffff;
   color: #0b111c;
@@ -57,6 +59,45 @@ a {
 .hairline {
   background-image: linear-gradient(90deg, transparent, rgba(169, 133, 67, 0.7), transparent);
   height: 1px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #0b111c;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.btn-primary:hover {
+  background: #f4f6f8;
+  transform: translateY(-1px);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.44);
 }
 
 @keyframes reveal {

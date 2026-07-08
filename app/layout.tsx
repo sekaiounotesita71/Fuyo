@@ -1,25 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 import { company } from "@/data/site";
 
-const notoSansJp = Noto_Sans_JP({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-noto-sans-jp",
-  display: "swap"
-});
-
-const notoSerifJp = Noto_Serif_JP({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-noto-serif-jp",
-  display: "swap"
-});
-
-const title = "合同会社芙蓉 | 食品業界の海外展開と業務DXを支援";
+const title = "合同会社芙蓉 | 食品業界向けAI・DX導入支援と海外進出支援";
 const description =
-  "合同会社芙蓉は、海外営業、AI・DX導入、インバウンド対応、多言語WEB制作まで、食品業界の現場理解を強みに中小企業の成長を支援します。";
+  "合同会社芙蓉は、食品業界・水産業界の現場を理解した実践型のAI・DX導入支援、海外進出支援、業務改善支援を提供します。LINE注文整理、見積作成、OCR、営業管理、海外対応まで小さく始められるDXを支援します。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.siteUrl),
@@ -27,12 +12,15 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "合同会社芙蓉",
-    "Fuyo LLC",
+    "FUYOU LLC",
     "食品業界 DX",
+    "食品業界 AI",
+    "水産業 DX",
+    "LINE注文 整理",
+    "見積作成 効率化",
+    "OCR 導入支援",
     "海外進出支援",
-    "水産 輸出",
-    "インバウンド支援",
-    "多言語サイト制作"
+    "輸出実務 相談"
   ],
   alternates: {
     canonical: "/"
@@ -49,7 +37,7 @@ export const metadata: Metadata = {
         url: "/images/hero-food-export.png",
         width: 1536,
         height: 864,
-        alt: "食品輸出とグローバルビジネスを想起させるデスクシーン"
+        alt: "食品業界の業務改善と海外展開を表す清潔感のあるビジネスイメージ"
       }
     ]
   },
@@ -64,7 +52,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0B111C"
+  themeColor: "#0E1B16"
 };
 
 export default function RootLayout({
@@ -72,9 +60,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: company.nameJa,
+    alternateName: company.nameEn,
+    url: company.siteUrl,
+    email: company.email
+  };
+
   return (
-    <html lang="ja" className={`${notoSansJp.variable} ${notoSerifJp.variable}`}>
-      <body>{children}</body>
+    <html lang="ja">
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c")
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

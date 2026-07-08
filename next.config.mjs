@@ -1,3 +1,10 @@
-NEXT_PUBLIC_SITE_URL=https://fuyo-link.com
-NEXT_PUBLIC_CONTACT_EMAIL=info@fuyo-link.com
-NEXT_PUBLIC_FORMSPREE_ENDPOINT=
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  poweredByHeader: false,
+  images: {
+    formats: ["image/avif", "image/webp"]
+  }
+};
+
+export default nextConfig;

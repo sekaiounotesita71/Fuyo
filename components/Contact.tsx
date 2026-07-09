@@ -183,7 +183,7 @@ export function Contact() {
               value={form.message}
               onChange={(event) => updateField("message", event.target.value)}
               className="min-h-40 resize-y border border-line bg-white px-4 py-3 font-normal leading-7 outline-none transition focus:border-green"
-              placeholder="例：LINE注文を整理したい、見積作成を早くしたい、海外バイヤー対応を相談したい"
+              placeholder="例：チャット注文を整理したい、見積作成を早くしたい、海外バイヤー対応を相談したい"
               required
             />
           </label>

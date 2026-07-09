@@ -4,7 +4,7 @@ import { company } from "@/data/site";
 
 const title = "合同会社芙蓉 | 食品業界向けAI・DX導入支援と海外進出支援";
 const description =
-  "合同会社芙蓉は、食品業界・水産業界の現場を理解した実践型のAI・DX導入支援、海外進出支援、業務改善支援を提供します。LINE注文整理、見積作成、OCR、営業管理、海外対応まで小さく始められるDXを支援します。";
+  "合同会社芙蓉は、食品業界・水産業界の現場を理解した実践型のAI・DX導入支援、海外進出支援、業務改善支援を提供します。チャット注文整理、見積作成、OCR、営業管理、海外対応まで小さく始められるDXを支援します。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.siteUrl),
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "食品業界 DX",
     "食品業界 AI",
     "水産業 DX",
-    "LINE注文 整理",
+    "チャット注文 整理",
     "見積作成 効率化",
     "OCR 導入支援",
     "海外進出支援",

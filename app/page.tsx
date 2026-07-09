@@ -28,7 +28,7 @@ export default function Home() {
                 食品業界の受発注・見積・海外対応を、AIとDXで整える。
               </h1>
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/78 md:text-xl md:leading-10">
-                LINE注文、見積作成、営業管理、海外対応まで。現場を理解した実践型の業務改善支援。
+                チャット注文、見積作成、営業管理、海外対応まで。現場を理解した実践型の業務改善支援。
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <Link className="btn-primary" href="/diagnosis">
@@ -44,7 +44,7 @@ export default function Home() {
             <div className="hidden border border-white/14 bg-white/[0.06] p-7 shadow-soft backdrop-blur-md lg:block">
               <p className="font-serif text-2xl font-semibold">現場で使える改善から始める</p>
               <div className="mt-8 grid gap-4">
-                {["LINE注文整理", "見積作成効率化", "海外バイヤー対応"].map((item) => (
+                {["チャット注文整理", "見積作成効率化", "海外バイヤー対応"].map((item) => (
                   <div key={item} className="flex items-center gap-3 border border-white/12 bg-white/[0.04] p-4">
                     <CheckCircle2 size={18} className="text-gold" aria-hidden />
                     <span className="text-sm font-semibold text-white/86">{item}</span>
